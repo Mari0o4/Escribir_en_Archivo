@@ -14,8 +14,8 @@ public class InicioSesion {
         Scanner scanner = new Scanner(System.in);
         int opcion;
 
+        System.out.println("BIENVENIDO A FOORNUS\n");
         do {
-            System.out.println("BIENVENIDO A FOORNUS\n");
             System.out.println("¿Qué quieres hacer?");
             System.out.println("1-Iniciar sesión");
             System.out.println("2-Registrar nuevo usuario");
@@ -43,9 +43,9 @@ public class InicioSesion {
                 case 2:
                     System.out.println("Registro:");
                     System.out.print("Introduce tu correo: ");
-                    correo = scanner.nextLine();
+                    correo = scanner.next();
                     System.out.print("Introduce la contraseña: ");
-                    contrasenia = scanner.nextLine();
+                    contrasenia = scanner.next();
 
                     if (!verificarDatos("CorreosContraseña.txt", correo, contrasenia)) {
                         almacenarDatos("CorreosContraseña.txt", correo, contrasenia);
@@ -96,10 +96,10 @@ public class InicioSesion {
 
                 case 3:
                     System.out.println("Eventos disponibles por el momento:");
-                    System.out.println("1-Apple vision");
-                    System.out.println("2-Classroom");
-                    System.out.println("3-ChatGpt");
-                    System.out.println("4-Github");
+                    System.out.println("1-Madrid en vivo");
+                    System.out.println("2-Entradas.com");
+                    System.out.println("3-Wizinkcenter");
+                    System.out.println("4-El Corte Ingles");
                     System.out.println("5-Volver atrás");
 
                     int opcionCompra = scanner.nextInt();
@@ -107,19 +107,19 @@ public class InicioSesion {
                     switch (opcionCompra) {
 
                         case 1:
-                            abrirEnlace("https://www.apple.com/apple-vision-pro/");
+                            abrirEnlace("https://madridenvivo.com/");
                             break;
 
                         case 2:
-                            abrirEnlace("https://classroom.google.com/");
+                            abrirEnlace("https://www.entradas.com/city/madrid-370/conciertos-y-festivales-85/");
                             break;
 
                         case 3:
-                            abrirEnlace("https://chat.openai.com/");
+                            abrirEnlace("https://www.wizinkcenter.es/calendario?categoria=Conciertos");
                             break;
 
                         case 4:
-                            abrirEnlace("https://github.com/login");
+                            abrirEnlace("https://www.elcorteingles.es/entradas/conciertos/madrid/");
                             break;
 
                         case 5:
